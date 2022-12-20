@@ -1,2 +1,2 @@
-Learning project on HTMLacademy
+Learning project on HTMLacademy!
 
