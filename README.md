@@ -1,3 +1,2 @@
-Learning project on HTMLacademy
-/ЗАЕБАЛО СУКА БЛЯДЬ
-Gbdsjd
+Learning project on HTMLacademy!
+
