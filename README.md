@@ -1,4 +1,4 @@
-## _Learning frontend devolop on HTMLacademy!_
+## _Learning frontend develop on HTMLacademy!_
 ---
 
 ### _Progect Nerds._
