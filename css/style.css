@@ -5,14 +5,560 @@
   /* Браузер сначала попробует найти шрифт локально */
   src: local("Roboto"),
        /* Если не получилось, загрузит woff2 */
-       url("/fonts/roboto.woff2") format("woff2"),
+       url("../fonts/roboto.woff2") format("woff2"),
        /* Если браузер не поддерживает woff2, загрузит woff */
-       url("/fonts/roboto.woff") format("woff");
+       url("../fonts/roboto.woff") format("woff");
 }
 
-/* Теперь можно использовать шрифт */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Roboto"),
+       /* Если не получилось, загрузит woff2 */
+       url("../fonts/robotobold.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("../fonts/robotobold.woff") format("woff");
+}
+
+/* Variables */
+:root {
+  /*index color */
+  --basic-black: #000000;
+  --basic-white: #FFFFFF;
+  --basic-less-dark: #283136;
+  --basic-less-white: #EEEEEE;
+  --basic-midleLight-red: #FB565A;
+  --basic-gray: #A6A6A6;
+  --basic-light-gray: #E1E1E1;
+  --basic-green: #00CA74;
+  --basic-yellow: #EFC849;
+  --basic-dark-gray: #444444;
+  --basic-middle-gray: #666666;
+  --basic-flash-white: #C1C1C1;
+  /* catalog color*/
+  --basic-middleDark-gray: #4D4D4D;
+  --basic-veryLight-gray: #F2F2F2;
+  --basic-mediumLight-gray: #ABABAB;
+  --basic-medium-dark: #231F20;
+  --basic-veryLight-blue: #D7DCDF;
+  --basic-special-gray: #DBDBDB;
+  /* styleguide color*/
+  --basic-midleDark-green: #01A25E;
+  --basic-pink-red: #E74246;
+  --basic-veryPink-red: #D7373B;
+  --basic-midleLigth-blue: #B4B9BB;
+  --basic-less-gray: #D5D5D5;
+  --basic-verySpecial-blue: #D7DCDE;
+  --basic-veryLess-gray: #DFDFDF;
+  --basic-medium-green: #00AA62;
+  --basic-lessDark-green: #00BC6C;
+  --basic-medium-yellow: #E5A722;
+  --basic-light-yellow: #EAB534;
+  --basic-midleLight-yellow: #EFC849;
+}
+
+
 body {
   font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  color: var(--basic-less-dark);
+  text-transform: none;
+  background-color: var(--basic-white);
 }
 
+a {
+  text-decoration: none;
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Скрываем Заголовки */
+.container h1, h2{
+  visibility: hidden;
+}
+
+/* Navigations */
+.main-navigation {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--basic-black);
+  background-color: var(--basic-less-white);
+}
+
+.main-header-logo:hover,
+.main-header-logo:focus{
+  opacity: 0.7;
+}
+
+.main-header-logo:active{
+  opacity: 0.3;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.active-navigation{
+  text-decoration: underline var(--basic-midleLight-red) 2px;
+  text-underline-offset: 13px;
+  text-underline-position: under;
+}
+
+/* User navigation */
+.site-navigation a,
+.user-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: var(--basic-midleLight-red);
+}
+
+.site-navigation a:active,
+.user-navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* advantages*/
+.advantages{
+  background-color: var(--basic-less-white);
+  margin-top: -5%;
+}
+
+.advantages-list{
+  list-style: none;
+}
+
+.advantages-item h3 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+/* Button */
+.button {
+  font: inherit;
+  text-align: center;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-midleLight-red);
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--basic-pink-red);
+}
+
+.button:active {
+  background-color: var(--basic-veryPink-red);
+}
+
+.active-opacity:active{
+  opacity: 0.3;
+}
+
+/* services */
+.services-list{
+  list-style: none;
+}
+
+.services-item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.app-button{
+  background-color: var(--basic-green);
+}
+
+.app-button:hover,
+.app-button:focus{
+  background-color: var(--basic-lessDark-green);
+}
+
+.app-button:active{
+  background-color: var(--basic-medium-green);
+}
+
+.presentation-button{
+    background-color: var(--basic-yellow);
+}
+
+.presentation-button:hover,
+.presentation-button:focus{
+  background-color: var(--basic-light-yellow);
+}
+
+.presentation-button:active{
+  background-color: var(--basic-medium-yellow);
+}
+
+/* about-company */
+.proud-about-company{
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--basic-black);
+}
+
+.order-about-company{
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.about-company-list{
+  list-style: none;
+}
+
+.about-company h3{
+  font: inherit;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  font-weight: 700;
+}
+
+.about-company-accuracy dt{
+  color: var(--basic-black);
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: 700;
+}
+
+.about-company-accuracy span{
+  font-size: 26px;
+  line-height: 40px;
+}
+
+.about-company dd{
+  line-height: 18px;
+}
+
+/* clients */
+
+.clients-list{
+  list-style: none;
+}
+
+.clients-item{
+  opacity: 0.2;
+}
+
+.clients-item:hover,
+.clients-item:focus{
+  opacity: 1;
+}
+
+.clients-item:active{
+  opacity: 0.1;
+}
+
+/* contacts */
+
+.contacts{
+  background-image: url("/img/map1.jpg");
+  background-repeat: no-repeat;
+}
+
+.contacts-name{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-black);
+}
+
+.contacts-adress{
+  line-height: 18px;
+  color: var(--basic-middle-gray);
+}
+
+.contacts-phone{
+  line-height: 18px;
+  color: var(--basic-middle-gray);
+}
+
+/* footer */
+.footer-list{
+  list-style: none;
+}
+
+.footer-friend{
+font-weight: 700;
+font-size: 36px;
+line-height: 36px;
+color: var(--basic-black);
+}
+
+.footer-discont{
+  line-height: 22px;
+  color: var(--basic-dark-gray);
+}
+
+/* modal */
+.modal-write h2{
+  visibility: visible;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+  color:var(--basic-black);
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"] {
+  font: inherit;
+  line-height: 18px;
+  border: 2px solid var(--basic-verySpecial-blue);
+  border-radius: 3px;
+  opacity: 0.5;
+  color: var(--basic-dark-gray);
+}
+
+.modal-description{
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.text-user{
+  font: inherit;
+  line-height: 18px;
+  border: 2px solid var(--basic-verySpecial-blue);
+  border-radius: 3px;
+  opacity: 0.5;
+  color: var(--basic-dark-gray);
+  resize: none;
+}
+
+.login-form input[type="text"]:hover,
+.login-form input[type="email"]:hover{
+  border: 2px solid var(--basic-midleLigth-blue);
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="email"]:focus{
+  border: 2px solid var(--basic-black);
+  opacity: 1;
+}
+
+.login-form input[type="text"]:invalid,
+.login-form input[type="email"]:invalid{
+  border: 2px solid var(--basic-pink-red);
+  border-radius: 3px;
+  color: var(--basic-pink-red);
+}
+
+.modal-close{
+  opacity: 0.3;
+}
+
+.modal-close:hover{
+  opacity: 1;
+  background-color: var(--basic-midleLight-red);
+}
+
+.modal-close:active{
+  opacity: 0.1;
+  background-color: var(--basic-midleLight-red);
+}
+
+/*catalog*/
+
+.container-catalog h1{
+  visibility: visible;
+  color: var(--basic-black);
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.filter legend {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.filter ul {
+  list-style: none;
+  line-height: 20px;
+}
+
+.slider-price{
+  background: var(--basic-less-white);
+  border-radius: 3px;
+}
+
+.filter-price-minimum,
+.filter-price-max{
+  background: var(--basic-less-white);
+  border-radius: 3px;
+  line-height: 22px;
+  border: none;
+  }
+
+.value-price{
+  text-transform: uppercase;
+  line-height: 22px;
+}
+
+.filter-input-radio{
+  opacity: 0.4;
+}
+
+.filter-input-radio:hover,
+.filter-input-radio:focus{
+  opacity: 1;
+}
+
+.filter-input-checkbox{
+  opacity: 0.4;
+}
+
+.filter-input-checkbox:hover,
+.filter-input-checkbox:focus{
+  opacity: 1;
+}
+
+.filter-button{
+  color: var(--basic-black);
+  background-color: var(--basic-less-white);
+}
+
+.filter-button:hover,
+.filter-button:focus{
+  background-color: var(--basic-veryLess-gray);
+}
+
+.filter-button:active{
+  background-color: var(--basic-less-gray);
+}
+
+.sorting p{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.sorting ul{
+  list-style: none;
+}
+
+.sorting-filter a{
+  font: inherit;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.sorting-filter a:hover,
+.sorting-filter a:focus{
+  opacity: 0.6;
+}
+
+.sorting-filter a:active{
+  opacity: 1;
+}
+
+.sorting-filter-current a,
+.sorting-filter-current a:hover,
+.sorting-filter-current a:focus,
+.sorting-filter-current a:active {
+  font: inherit;
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-names h3{
+  color: var(--basic-black);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.catalog-names h3:hover,
+.catalog-names h3:focus{
+  color: var(--basic-midleLight-red);
+}
+
+.catalog-names h3:active{
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.catalog-item-image svg{
+  opacity: 0.12;
+}
+
+.catalog-item-image svg:hover,
+.catalog-item-image svg:focus{
+  opacity: 1;
+}
+
+.catalog-item-current svg,
+.catalog-item-current svg:hover,
+.catalog-item-current svg:focus,
+.catalog-item-current svg:active{
+  opacity: 1;
+}
+
+.catalog-item p{
+  color: var(--basic-middle-gray);
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  color: var(--basic-black);
+  background-color: var(--basic-less-white);
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus{
+  background-color: var(--basic-veryLess-gray);
+}
+
+.pagination-item a:active{
+  background-color: var(--basic-less-gray);
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: var(--basic-black);
+  background-color: var(--basic-special-gray);
+  border: 3px solid var(--basic-special-gray);
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.0001);
+}
