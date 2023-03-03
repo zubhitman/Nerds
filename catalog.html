@@ -13,51 +13,44 @@
 
   <body class="page-body">
 
-    <header class="main-header">
+    <header class="main-header main-bg">
       <nav class="main-navigation">
+        <div class="container">
         <div class="main-navigation-wrapper">
         <a class="main-header-logo" href="index.html">
           <img src="img/logo/nerds-logo.svg" width="160" height="65" alt="Логотип сайта НЕРДС">
         </a>
           <ul class="site-navigation">
-          <li>
-            <a href="blank.html">Студия</a>
-          </li>
-          <li>
-            <a href="blank.html">Клиенты</a>
-          </li>
-          <li>
-            <a href="catalog.html">Магазин</a>
-          </li>
-          <li>
-            <a href="blank.html">Контакты</a>
-          </li>
+          <li><a href="blank.html">Студия</a></li>
+          <li><a href="blank.html">Клиенты</a></li>
+          <li><a class="active-navigation" href="catalog.html">Магазин</a></li>
+          <li><a href="blank.html">Контакты</a></li>
           </ul>
           <div class="user-navigation">
             <a class="basket-navigation" href="blank.html">Корзина</a>
           </div>
         </div>
+        </div>
       </nav>
     </header>
 
-    <main class="container-catalog">
-      <section class="shops">
-      <h1>Магазин готовых шаблонов</h1>
-      </section>
-      <div class="container2 catalog-grid">
+    <main>
+      <div class="main-bg catalog-main-head">
+        <h1>Магазин готовых шаблонов</h1>
+      </div>
+
+      <div class="container">
+      <div class="catalog-grid">
       <section class="product-filters">
         <h2>Фильтор товаров</h2>
-        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <form class="filter" method="post" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Стоимость:</legend>
-            <p class="slider-price">
-            <label><input class="filter-price" type="range" name="price_slider" min="0" max="150000" step="1"></label>
-            </p>
-            <p class="value-price">
-              <label>от<input class="filter-price-minimum" type="text" name="price_minimum" value="0"></label>
-              <label>до<input class="filter-price-max" type="text" name="price_max" value="150 000"></label>
-            </p>
+            <label><input type="range" name="price_slider" min="0" max="150000" step="1"></label>
+            <p><label><span class="value-price">от</span> <input type="text" name="price_minimum" value="0"></label>
+            <label><span class="value-price">до</span> <input type="text" name="price_max" value="150 000"></label></p>
           </fieldset>
+
           <fieldset>
             <legend>Сетка:</legend>
             <ul>
@@ -72,6 +65,7 @@
               </li>
             </ul>
           </fieldset>
+
           <fieldset>
             <legend>Особенности:</legend>
             <ul>
@@ -96,87 +90,72 @@
         </form>
       </section>
 
-      <section class="sorting">
-        <h2>Сортировка</h2>
-        <p>Сортировать:</p>
-        <ul class="sorting-list">
-          <li class="sorting-filter sorting-filter-current">
-            <a href="#">По цене</a>
-          </li>
-          <li class="sorting-filter">
-            <a href="#">По типу</a>
-          </li>
-          <li class="sorting-filter">
-            <a href="#">По названию</a>
-          </li>
-          <li class="sorting-filter sorting-filter-current">
-            <a href="#">icondown</a>
-          </li>
-          <li class="sorting-filter">
-            <a href="#">iconup</a>
-          </li>
-        </ul>
-      </section>
-
       <section class="catalog">
+
+        <div class="sorting">
+          <p>Сортировать:</p>
+          <ul class="sorting-list sorting-filter">
+            <li class="sorting-filter-current"><a href="#">По цене</a></li>
+            <li class=""><a href="#">По типу</a></li>
+            <li class=""><a href="#">По названию</a></li>
+            <li class="sorting-filter-current"><a href="#">down</a></li>
+            <li class=""><a href="#">up</a></li>
+          </ul>
+        </div>
+
         <h2>Каталог сайтов</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <a class="catalog-names" href="blank.html">
-              <h3>Sedona</h3></a>
+            <div class="products-description">
+              <a class="catalog-names" href="blank.html"><h3>Sedona</h3></a>
               <p>Информационный сайт<br> для туристов</p>
               <a class="button catalog-button" href="#">9 900 ₽</a>
-              <p class="catalog-item-image catalog-item-current">
-              <img src="img/site_catalog/sedona1.jpg" width="358" height="578" alt="Скриншот сайта для туристов Sedona">
-              </p>
+            </div>
+            <p class="catalog-item-image catalog-item-current"><img src="img/site_catalog/sedona1.jpg" width="358" height="578" alt="Скриншот сайта для туристов Sedona"></p>
           </li>
           <li class="catalog-item">
-            <a class="catalog-names" href="blank.html">
-              <h3>Pink app</h3></a>
+            <div class="products-description">
+              <a class="catalog-names" href="blank.html"><h3>Pink app</h3></a>
               <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
               <a class="button catalog-button" href="#">9 900 ₽</a>
-              <p class="catalog-item-image">
-              <img src="img/site_catalog/pink1.jpg" width="358" height="578" alt="Скриншот сайта для приложения Pink">
-              </p>
+            </div>
+            <p class="catalog-item-image"><img src="img/site_catalog/pink1.jpg" width="358" height="578" alt="Скриншот сайта для приложения Pink"></p>
           </li>
-
           <li class="catalog-item">
-            <a class="catalog-names" href="blank.html">
-              <h3>Barbershop</h3></a>
+            <div class="products-description">
+              <a class="catalog-names" href="blank.html"><h3>Barbershop</h3></a>
               <p>Сайт салона красоты.<br> Для мужчин, да.</p>
               <a class="button catalog-button" href="#">9 900 ₽</a>
-              <p class="catalog-item-image">
-              <img src="img/site_catalog/barbershop1.jpg" width="358" height="578" alt="Скришот сайта барбершопа Barbershop">
-              </p>
+            </div>
+            <p class="catalog-item-image"><img src="img/site_catalog/barbershop1.jpg" width="358" height="578" alt="Скришот сайта барбершопа Barbershop"></p>
           </li>
           <li class="catalog-item">
-            <a class="catalog-names" href="blank.html">
-              <h3>Mishka</h3></a>
+            <div class="products-description">
+              <a class="catalog-names" href="blank.html"><h3>Mishka</h3></a>
               <p>Интернет-магазин<br> вязанных игрушек</p>
               <a class="button catalog-button" href="#">9 900 ₽</a>
-              <p class="catalog-item-image">
-              <img src="img/site_catalog/mishka1.jpg" width="358" height="578" alt="Скриншот сайта вязанных игрушек Mishka">
-              </p>
+            </div>
+            <p class="catalog-item-image"><img src="img/site_catalog/mishka1.jpg" width="358" height="578" alt="Скриншот сайта вязанных игрушек Mishka"></p>
           </li>
           <li class="catalog-item">
-            <a class="catalog-names" href="blank.html">
-            <h3>A plus</h3></a>
-            <p>Лендинг курсов повышения<br> квалификация</p>
-            <a class="button catalog-button" href="#">9 900 ₽</a>
-            <p class="catalog-item-image">
-             <img src="img/site_catalog/aplus1.jpg" width="358" height="578" alt="Скриншот сайта курсов Aplus">
-            </p>
+            <div class="products-description">
+              <a class="catalog-names" href="blank.html"><h3>A plus</h3></a>
+              <p>Лендинг курсов повышения<br> квалификация</p>
+              <a class="button catalog-button" href="#">9 900 ₽</a>
+            </div>
+            <p class="catalog-item-image"><img src="img/site_catalog/aplus1.jpg" width="358" height="578" alt="Скриншот сайта курсов Aplus"></p>
           </li>
           <li class="catalog-item">
-            <a class="catalog-names" href="blank.html">
-            <h3>Кваст</h3></a>
-            <p>Промо-сайт производителя<br> крафтового кваса</p>
-            <a class="button catalog-button" href="#">9 900 ₽</a>
-            <p class="catalog-item-image">
-            <img src="img/site_catalog/kvast1.jpg" width="358" height="578" alt="Скриншот сайта крафтового кваса kvast">
-            </p>
+            <div class="products-description">
+              <a class="catalog-names" href="blank.html"><h3>Кваст</h3></a>
+              <p>Промо-сайт производителя<br> крафтового кваса</p>
+              <a class="button catalog-button" href="#">9 900 ₽</a>
+            </div>
+            <p class="catalog-item-image"><img src="img/site_catalog/kvast1.jpg" width="358" height="578" alt="Скриншот сайта крафтового кваса kvast"></p>
           </li>
         </ul>
+
+        <div>
         <ul class="pagination-list">
           <li class="pagination-item pagination-item-current">
             <a><span class="active-opacity">1</span></a>
@@ -187,27 +166,29 @@
           <li class="pagination-item">
             <a href="#"><span class="active-opacity">3</span></a>
           </li>
-          <li class="pagination-item">
+          <li class="pagination-item pagination-next-page">
             <a href="#"><span class="active-opacity">Следущая</span></a>
           </li>
         </ul>
       </section>
       </div>
 
+
       <section class="contacts">
         <h2>Контакты</h2>
         <div class="contacts-block">
-        <p class="contacts-name">NЁRDS DESIGN STUDIO</p>
-        <p class="contacts-adress">наб. Реки Карповки,<br>
-        5 лит П, Санкт-Петербург</p>
-        <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+        <p class="contacts-name">nёrd's design studio</p>
+        <p class="contacts-adress">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</p>
+        <p><a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a></p>
         <a class="button contacts-button" href="blank.html"><span class="active-opacity">Напишите нам</span></a>
-      </div>
+        </div>
       </section>
+    </div>
+
     </main>
 
     <footer class="main-footer">
-      <div class="container2">
+      <div class="container">
       <section class="footer-social">
       <h2>Социальные сети</h2>
         <ul class="footer-list">
