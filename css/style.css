@@ -131,6 +131,7 @@ img {
 .main-navigation-wrapper{
   display: grid;
   grid-template-columns: auto 1fr min-content;
+  align-items: center;
 }
 
 
@@ -145,6 +146,11 @@ img {
 
 .site-navigation {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px;
+  gap: 45px;
 }
 
 .active-navigation{
@@ -296,6 +302,7 @@ img {
 .about-company-accuracy{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 22px;
 }
 
 .about-company-accuracy dt{
@@ -396,6 +403,10 @@ img {
 .footer-list{
   list-style: none;
   padding-inline-start: 0;
+  display: flex;
+  justify-content: left;
+  padding: 0px;
+  gap: 9px;
 }
 
 .footer-friend{
@@ -767,12 +778,12 @@ margin: 0;
   background-color: var(--basic-less-white);
 }
 
-.pagination-item a:hover,
-.pagination-item a:focus{
+.pagination-button:hover,
+.pagination-button:focus{
   background-color: var(--basic-veryLess-gray);
 }
 
-.pagination-item a:active{
+.pagination-button:active{
   background-color: var(--basic-less-gray);
 }
 
