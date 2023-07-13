@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/scripts.js"></script>
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
@@ -92,7 +93,7 @@
           </section>
 
       <section>
-        <div class="sort-list-grid">
+        <div class="sort-list-flex">
           <p>Сортировать:</p>
         <div class="sorting-list">
           <ul class="sorting-filter clear-list">
@@ -125,7 +126,7 @@
           </li>
           <li class="products-list-item">
             <div class="products-description">
-              <h3><a href="#">Pink app</a></h3>
+              <h3><a class="product-name" href="#">Pink app</a></h3>
               <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
               <a class="button products-button" href="#">9 900 ₽</a>
             </div>
@@ -138,7 +139,7 @@
           </li>
           <li class="products-list-item">
             <div class="products-description">
-              <h3><a href="#">Barbershop</a></h3>
+              <h3><a class="product-name" href="#">Barbershop</a></h3>
               <p>Сайт салона красоты.<br> Для мужчин, да.</p>
               <a class="button products-button" href="#">9 900 ₽</a>
             </div>
@@ -151,7 +152,7 @@
           </li>
           <li class="products-list-item">
             <div class="products-description">
-              <h3><a href="#">Mishka</a></h3>
+              <h3><a class="product-name" href="#">Mishka</a></h3>
               <p>Интернет-магазин<br> вязанных игрушек</p>
               <a class="button products-button" href="#">9 900 ₽</a>
             </div>
@@ -164,7 +165,7 @@
           </li>
           <li class="products-list-item">
             <div class="products-description">
-              <h3><a href="#">A plus</a></h3>
+              <h3><a class="product-name" href="#">A plus</a></h3>
               <p>Лендинг курсов повышения<br> квалификация</p>
               <a class="button products-button" href="#">9 900 ₽</a>
             </div>
@@ -177,7 +178,7 @@
           </li>
           <li class="products-list-item">
             <div class="products-description">
-              <h3><a href="#">Кваст</a></h3>
+              <h3><a class="product-name" href="#">Кваст</a></h3>
               <p>Промо-сайт производителя<br> крафтового кваса</p>
               <a class="button products-button" href="#">9 900 ₽</a>
             </div>
@@ -198,24 +199,23 @@
             <li><a class="pagination-item pagination-next-page" href="#">Следущая</a></li>
           </ul>
         </div>
-      </section>
+        </section>
       </div>
-    </div>
+      </div>
 
 
-    <section class="contacts">
-      <h2 class="visually-hidden">Контакты</h2>
-      <div class="container">
-        <div class="contacts-block">
-          <p class="contacts-name">nёrd's design studio</p>
-          <p class="contacts-adress">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</p>
-          <p class="contacts-tel"><a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a></p>
-          <a class="button contacts-button" href="blank.html"><span class="active-opacity">Напишите нам</span></a>
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts-map">
+          <div class="contacts-block">
+            <p class="contacts-name">nёrd's design studio</p>
+            <p class="contacts-adress">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</p>
+            <p class="contacts-tel"><a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a></p>
+           <a class="button contacts-button" href="#"><span class="active-opacity">Напишите нам</span></a>
+          </div>
+          <img src="img/map1.jpg" width="1440" height="416" alt="Карта c офисом компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
         </div>
-      </div>
-      <div class="contacts-map">
-        <img src="img/map1.jpg" alt="Карта"></div>
-    </section>
+     </section>
     </main>
 
     <footer class="main-footer">
@@ -254,6 +254,31 @@
       <p class="footer-discont">Скидка 10% для друзей из социальных сетей.</p>
       </div>
       </div>
+
+      <div class="modal-write">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="fieldset-clear">
+            <legend>Напишите нам</legend>
+              <ul class="modal-items clear-list">
+                <li>
+                  <label for="name-user">Ваше имя:</label>
+                  <input type="text" name="name-user" id="name-user" placeholder="Имя и Фамилия:">
+                </li>
+                <li>
+                  <label for="email-user">Ваш email:</label>
+                  <input type="email" name="email-user" id="email-user" placeholder="email@example.com">
+                </li>
+                <li>
+                  <label for="text-user">Текст письма:</label>
+                  <textarea name="text-user" id="text-user" cols="15" rows="5" placeholder="В свободной форме"></textarea>
+                </li>
+              </ul>
+            <button class="modal-send" type="submit">Отправить</button>
+            <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи"></button>
+        </form>
+      </div>
+
+
     </footer>
   </body>
 </html>
