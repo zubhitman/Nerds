@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/scripts.js"></script>
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
@@ -22,10 +21,10 @@
           <img src="img/logo/nerds-logo.svg" width="160" height="65" alt="Логотип сайта НЕРДС">
         </a>
           <ul class="site-navigation clear-list">
-          <li><a href="blank.html">Студия</a></li>
-          <li><a href="blank.html">Клиенты</a></li>
-          <li><a class="active-navigation" href="catalog.html">Магазин</a></li>
-          <li><a href="blank.html">Контакты</a></li>
+            <li><a href="blank.html">Студия</a></li>
+            <li><a href="blank.html">Клиенты</a></li>
+            <li><a class="active-navigation" href="catalog.html">Магазин</a></li>
+            <li><a href="blank.html">Контакты</a></li>
           </ul>
           <div class="basket-navigation">
             <a class="basket-link" href="blank.html"><span>Корзина</span></a>
@@ -206,16 +205,19 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts-map">
+        <div class= "contact-list container">
           <div class="contacts-block">
             <p class="contacts-name">nёrd's design studio</p>
             <p class="contacts-adress">наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</p>
             <p class="contacts-tel"><a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a></p>
-           <a class="button contacts-button" href="#"><span class="active-opacity">Напишите нам</span></a>
+            <a class="button contacts-button" href="#"><span class="active-opacity">Напишите нам</span></a>
           </div>
-          <img src="img/map1.jpg" width="1440" height="416" alt="Карта c офисом компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
         </div>
-     </section>
+          <div class="contacts-map">
+          <iframe class="contacts-iframe" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d7987.039402127665!2d30.310156781930228!3d59.96930696536927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4696314db404b36b%3A0x1d934f1978240bba!2z0L3QsNCxLiDQoNC10LrQuCDQmtCw0YDQv9C-0LLQutC4LCA1INC70LjRgiDQnywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzAyMg!3m2!1d59.968584299999996!2d30.317861699999998!5e0!3m2!1sru!2sru!4v1692813069547!5m2!1sru!2sru" width="1440" height="416" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <img src="img/map.png" alt="Карта c офисом компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
+        </div>
+      </section>
     </main>
 
     <footer class="main-footer">
@@ -254,8 +256,9 @@
       <p class="footer-discont">Скидка 10% для друзей из социальных сетей.</p>
       </div>
       </div>
+    </footer>
 
-      <div class="modal-write">
+      <section class="modal modal-write">
         <form action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="fieldset-clear">
             <legend>Напишите нам</legend>
@@ -276,9 +279,9 @@
             <button class="modal-send" type="submit">Отправить</button>
             <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи"></button>
         </form>
-      </div>
+      </section>
 
-
-    </footer>
+    <script src="/js/modal.js"></script>
+    <script src="/js/slider.js"></script>
   </body>
 </html>
